@@ -23,6 +23,7 @@
 		048DE6EE21EC7F9800BD71DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6EC21EC7F9800BD71DC /* Main.storyboard */; };
 		048DE6F021EC7FA800BD71DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6EF21EC7FA800BD71DC /* Assets.xcassets */; };
 		048DE6F321EC7FA800BD71DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6F121EC7FA800BD71DC /* LaunchScreen.storyboard */; };
+		E1DEA30B9281FE1609A3E32C /* Pods_Soaq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67E87529798FC0BF76F8F084 /* Pods_Soaq.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,9 @@
 		048DE6EF21EC7FA800BD71DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048DE6F221EC7FA800BD71DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048DE6F421EC7FA800BD71DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E455190A5012A5B14D270DD /* Pods-Soaq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soaq.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Soaq/Pods-Soaq.debug.xcconfig"; sourceTree = "<group>"; };
+		67E87529798FC0BF76F8F084 /* Pods_Soaq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Soaq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C26AF795C137BBBA77F87A /* Pods-Soaq.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Soaq.release.xcconfig"; path = "Pods/Target Support Files/Pods-Soaq/Pods-Soaq.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DEA30B9281FE1609A3E32C /* Pods_Soaq.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,8 @@
 			children = (
 				048DE6E721EC7F9800BD71DC /* Soaq */,
 				048DE6E621EC7F9800BD71DC /* Products */,
+				210BDC1A23BFA3FF28401F2A /* Pods */,
+				A515AFE438BFE03637FC0901 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +136,23 @@
 			path = Soaq;
 			sourceTree = "<group>";
 		};
+		210BDC1A23BFA3FF28401F2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E455190A5012A5B14D270DD /* Pods-Soaq.debug.xcconfig */,
+				A1C26AF795C137BBBA77F87A /* Pods-Soaq.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A515AFE438BFE03637FC0901 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67E87529798FC0BF76F8F084 /* Pods_Soaq.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048DE6F721EC7FA800BD71DC /* Build configuration list for PBXNativeTarget "Soaq" */;
 			buildPhases = (
+				F6B19482DD8EEE3A33F8E4CB /* [CP] Check Pods Manifest.lock */,
 				048DE6E121EC7F9800BD71DC /* Sources */,
 				048DE6E221EC7F9800BD71DC /* Frameworks */,
 				048DE6E321EC7F9800BD71DC /* Resources */,
+				1636717B1ADDF3050B9285C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +220,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1636717B1ADDF3050B9285C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Soaq/Pods-Soaq-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Soaq/Pods-Soaq-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6B19482DD8EEE3A33F8E4CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Soaq-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048DE6E121EC7F9800BD71DC /* Sources */ = {
@@ -356,6 +425,7 @@
 		};
 		048DE6F821EC7FA800BD71DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E455190A5012A5B14D270DD /* Pods-Soaq.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +444,7 @@
 		};
 		048DE6F921EC7FA800BD71DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C26AF795C137BBBA77F87A /* Pods-Soaq.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

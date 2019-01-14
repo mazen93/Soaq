@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
+
 
 class BestSellerVc: UIViewController {
 
@@ -27,8 +30,102 @@ class BestSellerVc: UIViewController {
         Brandscollection.dataSource=self
     }
     
+    func loadBrands() {
+        let url="https://www.salonidepot.com/app/app.asmx/GetBrands?pageIndex=-1&userId=0&countryId=1&currencyId=1"
+        
+        Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil)
+            .responseJSON { response in
+                switch response.result
+                {
+                case .failure(let error): break
+                self.refresh.stopAnimating()
+                    
+                    
+                case .success(let value):
+                    
+                    self.refresh.stopAnimating()
+                    
+                    let json = JSON(value)
+                    print(json)
+                    
+                    if let dataArr = json.array
+                    {
+                        
+                        
+                        for dataArr in dataArr {
+                            
+                            let id = dataArr ["id"].int
+                            let titleAr = dataArr ["TitleAR"].string
+                            let titleEn = dataArr ["TitleEN"].string
+                            let icon = dataArr ["Photo"].string
+                            
+                            
+                            // create Ream Object
+                            let item=BrandsModel(id: id, titleAR: titleAr, titleEn: titleEn, photo: icon)
+                            
+                            self.BrandsArray.append(item)
+                        }
+                        
+                        //appending it to list
+                        self.Brandscollection.reloadData()
+                        
+                    }
+                    
+                }
+                
+                
+        }
+    }
 
-
+    func loadBestSelelr()  {
+        let url="https://www.salonidepot.com/app/app.asmx/GetBrands?pageIndex=-1&userId=0&countryId=1&currencyId=1"
+        
+        Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil)
+            .responseJSON { response in
+                switch response.result
+                {
+                case .failure(let error): break
+                self.refresh.stopAnimating()
+                    
+                    
+                case .success(let value):
+                    
+                    self.refresh.stopAnimating()
+                    
+                    let json = JSON(value)
+                    print(json)
+                    
+                    if let dataArr = json.array
+                    {
+                        
+                        
+                        for dataArr in dataArr {
+                            
+                            let id = dataArr ["id"].int
+                            let titleAr = dataArr ["TitleAR"].string
+                            let titleEn = dataArr ["TitleEN"].string
+                            let icon = dataArr ["Photo"].string
+                            let finalPrice=dataArr ["Photo"].string
+                            let currencyAr=dataArr ["CurrencyAR"].string
+                            let currencyEn=dataArr ["CurrencyEN"].string
+                            
+                         
+                            // create Ream Object
+                            let item=bestSellerModel(id: id, titleAR: titleAr, titleEn: titleEn, photo: icon, final_price: finalPrice, currencyAr: currencyAr, currencyEn: currencyEn)
+                            
+                            self.collection.append(item)
+                        }
+                        
+                        //appending it to list
+                        self.Brandscollection.reloadData()
+                        
+                    }
+                    
+                }
+                
+                
+        }
+    }
 }
 
 
@@ -45,9 +142,6 @@ extension BestSellerVc:UICollectionViewDataSource,UICollectionViewDelegate,UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
-        
         if collectionView == collection {
             
 
@@ -60,9 +154,6 @@ extension BestSellerVc:UICollectionViewDataSource,UICollectionViewDelegate,UICol
             return cell
             
         }
-        
-        
-        
 
     }
     
