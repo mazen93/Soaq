@@ -7,14 +7,15 @@
 //
 
 import UIKit
-
+import Alamofire
+import SwiftyJSON
 class SubCategoryVC: UIViewController {
 
     
     
     var item:MainCategoryModel!
     var array:[SubCategoryModel]=[]
-  @IBOutlet weak var collection: UICollectionView!
+    @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var refresh: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,61 @@ class SubCategoryVC: UIViewController {
         
         collection.delegate=self
         collection.dataSource=self
+        loadData()
     }
     
 
+    
+    func loadData()  {
+        
+        refresh.startAnimating()
+        
+        let url="http://souq.hardtask.co/app/app.asmx/GetCategories?categoryId=1&countryId=1"
+        
+        Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil)
+            .responseJSON { response in
+                switch response.result
+                {
+                case .failure(let error): break
+                self.refresh.stopAnimating()
+                    
+                    
+                case .success(let value):
+                    
+                    self.refresh.stopAnimating()
+                    
+                    let json = JSON(value)
+                    print(json)
+                    
+                    if let dataArr = json.array
+                    {
+                        
+                        
+                        for dataArr in dataArr {
+                            
+                            let id = dataArr ["Id"].int
+                            let titleAr = dataArr ["TitleAR"].string
+                            let titleEn = dataArr ["TitleEN"].string
+                            let icon = dataArr ["Photo"].string
+                            let productCount=dataArr["ProductCount"].string
+                            
+                            // create Ream Object
+                            let iteem=SubCategoryModel(id: id!, titleAR: titleAr!, titleEn: titleEn!, photo: icon!, productCount: productCount!)
+                            
+                            self.array.append(iteem)
+                        }
+                        
+                        //appending it to list
+                        self.collection.reloadData()
+                        
+                    }
+                    
+                }
+                
+                
+        }
+        
+    }
 
 }
 extension SubCategoryVC:UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
@@ -38,7 +91,7 @@ extension SubCategoryVC:UICollectionViewDataSource,UICollectionViewDelegate,UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCategoryCell", for: indexPath) as! SubCategoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SubCategoryCell", for: indexPath) as! SubCategoryCell
         cell.setData(data: array[indexPath.row])
         return cell
         

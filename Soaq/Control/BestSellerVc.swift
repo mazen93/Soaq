@@ -31,6 +31,11 @@ class BestSellerVc: UIViewController {
         
         Brandscollection.delegate=self
         Brandscollection.dataSource=self
+        
+        
+        
+        loadBestSelelr()
+        loadBrands()
     }
     
     func loadBrands() {
@@ -57,7 +62,7 @@ class BestSellerVc: UIViewController {
                         
                         for dataArr in dataArr {
                             
-                            let id = dataArr ["id"].int
+                            let id = dataArr ["Id"].int
                             let titleAr = dataArr ["TitleAR"].string
                             let titleEn = dataArr ["TitleEN"].string
                             let icon = dataArr ["Photo"].string
@@ -81,7 +86,7 @@ class BestSellerVc: UIViewController {
     }
 
     func loadBestSelelr()  {
-        let url="https://www.salonidepot.com/app/app.asmx/GetBrands?pageIndex=-1&userId=0&countryId=1&currencyId=1"
+        let url="https://www.salonidepot.com/app/app.asmx/GetBestSellers?pageIndex=-1&loginUserId=0&countryId=1&currencyId=1"
         
         Alamofire.request(url, method: .get, encoding: URLEncoding.default, headers: nil)
             .responseJSON { response in
@@ -104,7 +109,7 @@ class BestSellerVc: UIViewController {
                         
                         for dataArr in dataArr {
                             
-                            let id = dataArr ["id"].int
+                            let id = dataArr ["Id"].int
                             let titleAr = dataArr ["TitleAR"].string
                             let titleEn = dataArr ["TitleEN"].string
                             let icon = dataArr ["Photo"].string
