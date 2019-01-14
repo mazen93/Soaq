@@ -15,7 +15,7 @@ class SubCategoryVC: UIViewController {
     var item:MainCategoryModel!
     var array:[SubCategoryModel]=[]
   @IBOutlet weak var collection: UICollectionView!
-    
+    @IBOutlet weak var refresh: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

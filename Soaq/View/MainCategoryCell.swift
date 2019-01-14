@@ -18,6 +18,10 @@ class MainCategoryCell: UICollectionViewCell {
     
     
     func setData(data:MainCategoryModel) {
+        self.categoryName.text=data.titleEn!
+        self.categoryCount.text="(\(data.productCount!))"
         
+        let url=URL(string: data.photo!)
+        photo.kf.setImage(with: url)
     }
 }

@@ -8,10 +8,19 @@
 
 import Foundation
 class SubCategoryModel {
-    var id:Int=0
-    var titleAR:String=""
-    var titleEn:String=""
-    var photo:String=""
+    var id:Int?
+    var titleAR:String?
+    var titleEn:String?
+    var photo:String?
     
+    var productCount:String?
+    
+    init(id:Int,titleAR:String,titleEn:String,photo:String,productCount:String) {
+        self.id=id
+        self.titleAR=titleAR
+        self.titleEn=titleEn
+        self.photo=photo
+        self.productCount=productCount
+    }
 
 }

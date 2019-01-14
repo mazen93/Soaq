@@ -8,10 +8,10 @@
 
 import Foundation
 class BrandsModel {
-    var id:Int=0
-    var titleAR:String=""
-    var titleEn:String=""
-    var photo:String=""
+    var id:Int?
+    var titleAR:String?
+    var titleEn:String?
+    var photo:String?
     
     
     init(id:Int,titleAR:String,titleEn:String,photo:String) {

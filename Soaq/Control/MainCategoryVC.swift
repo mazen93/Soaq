@@ -57,14 +57,14 @@ class MainCategoryVC: UIViewController{
                         
                         for dataArr in dataArr {
                             
-                            let id = dataArr ["id"].int
+                            let id = dataArr ["Id"].int
                             let titleAr = dataArr ["TitleAR"].string
                             let titleEn = dataArr ["TitleEN"].string
                             let icon = dataArr ["Photo"].string
-                            
+                            let productCount=dataArr["ProductCount"].string
                             
                             // create Ream Object
-                            let item=MainCategoryModel(id: id, titleAR: titleAr, titleEn: titleEn, photo: icon)
+                            let item=MainCategoryModel(id: id!, titleAR: titleAr!, titleEn: titleEn!, photo: icon!, productCount: productCount!)
                             
                             self.array.append(item)
                         }

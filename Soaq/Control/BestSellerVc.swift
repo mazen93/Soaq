@@ -13,6 +13,9 @@ import SwiftyJSON
 
 class BestSellerVc: UIViewController {
 
+    
+    
+    @IBOutlet weak var refresh: UIActivityIndicatorView!
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var Brandscollection: UICollectionView!
 
@@ -61,7 +64,7 @@ class BestSellerVc: UIViewController {
                             
                             
                             // create Ream Object
-                            let item=BrandsModel(id: id, titleAR: titleAr, titleEn: titleEn, photo: icon)
+                            let item=BrandsModel(id: id!, titleAR: titleAr!, titleEn: titleEn!, photo: icon!)
                             
                             self.BrandsArray.append(item)
                         }
@@ -111,9 +114,9 @@ class BestSellerVc: UIViewController {
                             
                          
                             // create Ream Object
-                            let item=bestSellerModel(id: id, titleAR: titleAr, titleEn: titleEn, photo: icon, final_price: finalPrice, currencyAr: currencyAr, currencyEn: currencyEn)
+                            let item=bestSellerModel(id: id!, titleAR: titleAr!, titleEn: titleEn!, photo: icon!, final_price: finalPrice!, currencyAr: currencyAr!, currencyEn: currencyEn!)
                             
-                            self.collection.append(item)
+                            self.array.append(item)
                         }
                         
                         //appending it to list
@@ -166,7 +169,10 @@ extension BestSellerVc:UICollectionViewDataSource,UICollectionViewDelegate,UICol
         let collectionViewSize = collectionView.frame.size.width - padding
         
         return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+        }else{
+            return CGSize(width: 60.0, height: 60.0)
         }
+        
     }
     
     

@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BrandsCell: UICollectionViewCell {
     @IBOutlet weak var photo: UIImageView!
-    
+    func setData(data:BrandsModel) {
+        let url=URL(string: data.photo!)
+        photo.kf.setImage(with: url)
+    }
 }

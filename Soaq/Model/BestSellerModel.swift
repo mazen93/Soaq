@@ -8,13 +8,13 @@
 
 import Foundation
 class bestSellerModel {
-    var id:Int=0
-    var titleAR:String=""
-    var titleEn:String=""
-    var photo:String=""
-    var final_price:String=""
-    var currencyAr:String=""
-    var currencyEn:String=""
+    var id:Int?
+    var titleAR:String?
+    var titleEn:String?
+    var photo:String?
+    var final_price:String?
+    var currencyAr:String?
+    var currencyEn:String?
     
     init(id:Int,titleAR:String,titleEn:String,photo:String,final_price:String,currencyAr:String,currencyEn:String) {
         self.id=id
