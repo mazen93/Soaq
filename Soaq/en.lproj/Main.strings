@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "City"; ObjectID = "6YM-pz-kjO"; */
+"6YM-pz-kjO.normalTitle" = "City";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "AeW-KZ-r1K"; */
+"AeW-KZ-r1K.text" = "Register";
+
+/* Class = "UILabel"; text = "By clicking register you agree to "; ObjectID = "BzB-bC-Ea8"; */
+"BzB-bC-Ea8.text" = "By clicking register you agree to ";
+
+/* Class = "UITextField"; placeholder = "12345"; ObjectID = "SNb-vl-eZ5"; */
+"SNb-vl-eZ5.placeholder" = "12345";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Spe-PR-dZP"; */
+"Spe-PR-dZP.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Area"; ObjectID = "awB-IX-zTk"; */
+"awB-IX-zTk.normalTitle" = "Area";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "c8b-fO-UDR"; */
+"c8b-fO-UDR.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Full Name"; ObjectID = "dgI-L1-gRf"; */
+"dgI-L1-gRf.placeholder" = "Full Name";
+
+/* Class = "UIButton"; normalTitle = "terms&Condition"; ObjectID = "mKB-WU-g5n"; */
+"mKB-WU-g5n.normalTitle" = "terms&Condition";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "mu2-xH-gwx"; */
+"mu2-xH-gwx.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Code"; ObjectID = "p9q-uM-qVQ"; */
+"p9q-uM-qVQ.normalTitle" = "Code";
+
+/* Class = "UIButton"; normalTitle = "Change Language"; ObjectID = "ucN-fS-WDY"; */
+"ucN-fS-WDY.normalTitle" = "Change Language";
+
+/* Class = "UIButton"; normalTitle = "Country"; ObjectID = "x5B-77-Hyl"; */
+"x5B-77-Hyl.normalTitle" = "Country";

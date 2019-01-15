@@ -12,6 +12,13 @@
 		048DE6EE21EC7F9800BD71DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6EC21EC7F9800BD71DC /* Main.storyboard */; };
 		048DE6F021EC7FA800BD71DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6EF21EC7FA800BD71DC /* Assets.xcassets */; };
 		048DE6F321EC7FA800BD71DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048DE6F121EC7FA800BD71DC /* LaunchScreen.storyboard */; };
+		312BB12321ECBF9B00339542 /* webviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB12221ECBF9B00339542 /* webviewViewController.swift */; };
+		312BB12D21ECCD1900339542 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB12C21ECCD1900339542 /* Shared.swift */; };
+		312BB12F21ECF33C00339542 /* popupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB12E21ECF33C00339542 /* popupViewController.swift */; };
+		312BB13321ECFA5100339542 /* poupcountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB13221ECFA5100339542 /* poupcountryViewController.swift */; };
+		312BB13521ECFFEC00339542 /* popupcityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB13421ECFFEC00339542 /* popupcityViewController.swift */; };
+		312BB13721ED01E300339542 /* popupAreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB13621ED01E300339542 /* popupAreaViewController.swift */; };
+		312BB14021ED14E000339542 /* modelt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312BB13F21ED14E000339542 /* modelt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		048DE6EF21EC7FA800BD71DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048DE6F221EC7FA800BD71DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048DE6F421EC7FA800BD71DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312BB12221ECBF9B00339542 /* webviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webviewViewController.swift; sourceTree = "<group>"; };
+		312BB12C21ECCD1900339542 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		312BB12E21ECF33C00339542 /* popupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupViewController.swift; sourceTree = "<group>"; };
+		312BB13221ECFA5100339542 /* poupcountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poupcountryViewController.swift; sourceTree = "<group>"; };
+		312BB13421ECFFEC00339542 /* popupcityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupcityViewController.swift; sourceTree = "<group>"; };
+		312BB13621ED01E300339542 /* popupAreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupAreaViewController.swift; sourceTree = "<group>"; };
+		312BB13F21ED14E000339542 /* modelt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,10 @@
 		048DE6E721EC7F9800BD71DC /* Soaq */ = {
 			isa = PBXGroup;
 			children = (
+				314F702021EDAF7C00EE229E /* NotificationCenter */,
+				314F701F21EDAF6E00EE229E /* webviewkit */,
+				314F701E21EDAF5800EE229E /* Model */,
+				314F701D21EDAF3F00EE229E /* popupviewcontrollers */,
 				048DE6E821EC7F9800BD71DC /* AppDelegate.swift */,
 				048DE6EA21EC7F9800BD71DC /* ViewController.swift */,
 				048DE6EC21EC7F9800BD71DC /* Main.storyboard */,
@@ -62,6 +80,42 @@
 				048DE6F421EC7FA800BD71DC /* Info.plist */,
 			);
 			path = Soaq;
+			sourceTree = "<group>";
+		};
+		314F701D21EDAF3F00EE229E /* popupviewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				312BB13621ED01E300339542 /* popupAreaViewController.swift */,
+				312BB13421ECFFEC00339542 /* popupcityViewController.swift */,
+				312BB13221ECFA5100339542 /* poupcountryViewController.swift */,
+				312BB12E21ECF33C00339542 /* popupViewController.swift */,
+			);
+			path = popupviewcontrollers;
+			sourceTree = "<group>";
+		};
+		314F701E21EDAF5800EE229E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				312BB13F21ED14E000339542 /* modelt.swift */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		314F701F21EDAF6E00EE229E /* webviewkit */ = {
+			isa = PBXGroup;
+			children = (
+				312BB12221ECBF9B00339542 /* webviewViewController.swift */,
+			);
+			path = webviewkit;
+			sourceTree = "<group>";
+		};
+		314F702021EDAF7C00EE229E /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				312BB12C21ECCD1900339542 /* Shared.swift */,
+			);
+			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +189,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312BB12D21ECCD1900339542 /* Shared.swift in Sources */,
+				312BB14021ED14E000339542 /* modelt.swift in Sources */,
+				312BB12F21ECF33C00339542 /* popupViewController.swift in Sources */,
+				312BB12321ECBF9B00339542 /* webviewViewController.swift in Sources */,
 				048DE6EB21EC7F9800BD71DC /* ViewController.swift in Sources */,
+				312BB13721ED01E300339542 /* popupAreaViewController.swift in Sources */,
+				312BB13521ECFFEC00339542 /* popupcityViewController.swift in Sources */,
 				048DE6E921EC7F9800BD71DC /* AppDelegate.swift in Sources */,
+				312BB13321ECFA5100339542 /* poupcountryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -227,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -285,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69H6G2XHVM;
 				INFOPLIST_FILE = Soaq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 69H6G2XHVM;
 				INFOPLIST_FILE = Soaq/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
